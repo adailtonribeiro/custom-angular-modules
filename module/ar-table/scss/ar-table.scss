@@ -1,0 +1,80 @@
+@import '../common/scss/variables';
+#arTable {
+  margin: 0px 18px 0px 13px;
+  #divHeader {
+  	.custom-header {
+	  background-color: $background-container;
+      border: $border-field-valid;
+      border-bottom: none;
+  	}
+    thead {
+      tr {
+        th {
+          height: 35px !important;
+          padding-top: 10px;
+          &.column-header {
+            border: none !important;
+          }
+          &.center {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  #divContent {
+    .fixed-height {
+      overflow-y: auto;
+      border: $border-field-valid;
+      margin-bottom: 10px;
+    }
+    table {
+      tbody {
+        tr {
+          &.item-selected {
+            background-color: #e7e7e7 !important;
+          }
+          td {
+            height: 35px !important;
+            max-width: 0px;
+            padding-top: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            &.center {
+	          text-align: center;
+	        }
+            a {
+              cursor: pointer;
+              &:hover {
+                color: $hover-link;
+              }
+            }
+            &.padding-icons {
+              padding: 9px 14px;
+            }
+            div {
+              div {
+                &.form-group {
+                  margin: 0px;
+                  padding: 0px 0px 10px 0px !important;
+                }
+              }
+            }
+          }
+          &:hover {
+            background-color: #f5f5f5;
+          }
+        }
+      }
+    }
+  }
+  #divBusy {
+    >i {
+      &.position-absolute {
+        z-index: 1;
+        position: absolute;
+      }
+    }
+  }
+}
