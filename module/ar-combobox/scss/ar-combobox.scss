@@ -1,0 +1,125 @@
+@import '../common/scss/variables';
+.ar-combobox {
+  .help-block {
+    pointer-events: none;
+  }
+  .highlighted {
+    color: #5ec9c9;
+  }
+  .ar-combobox-input {
+    padding: 0px 32px 0px 9px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &.better-placeholder-active {
+      padding: 10px 37px 0px 11px !important;
+    }
+  }
+  .ar-combobox-dropdown-menu {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: mandatory;
+    scroll-snap-coordinate: 10% 10%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    display: none;
+    min-width: 160px;
+    padding: 0 !important;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    &.open {
+      display: block;
+    }
+    table {
+      &.ar-combobox-table {
+        margin: 2px 0px 2px 0px;
+        tbody {
+          tr {
+            outline: none;
+            &.item-selected {
+              background-color: #e7e7e7 !important;
+            }
+            td {
+              height: 20px !important;
+              max-width: 0px;
+              padding: 3px 3px 5px 8px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              border: none;
+              cursor: pointer;
+            }
+            &:hover {
+              background-color: $background-container-padrao;
+            }
+          }
+        }
+        tfoot {
+          tr {
+            td {
+              border: none;
+              padding: 4px 0px 0px 8px;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ar-combobox-buttons {
+    a {
+      float: right;
+      position: relative;
+      z-index: 0;
+      cursor: pointer;
+      &.ar-combobox-button-toggle {
+        margin-right: 10px;
+        margin-top: -20px;
+      }
+      &.ar-combobox-button-clear {
+        margin-right: 25px;
+        margin-top: -20px;
+      }
+      &.disabled {
+        color: #AAAAAA;
+        cursor: default;
+        pointer-events: none;
+        text-decoration: none;
+      }
+    }
+  }
+  >.external-link {
+    float: right;
+    margin-top: -20px;
+    >button {
+      outline: none;
+      color: #000;
+      border: 1px solid Transparent;
+      background-color: Transparent;
+      padding: 0px 2px 0px 2px;
+      &:hover {
+        border-color: #cccccc;
+        background-color: #f9f9f9;
+      }
+      &:disabled{
+        color: #cccccc;
+        pointer-events: none;
+      }
+      &:before {
+        font-size: 12px;
+        content: "\f08e";
+        font-family: FontAwesome;
+      }
+    }
+  }
+}

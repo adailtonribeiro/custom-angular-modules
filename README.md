@@ -1,4 +1,4 @@
-# Custom Angular Modules
+# Custom AngularJS Modules
 
 **ar-table** example:
 
@@ -17,4 +17,19 @@
         <ar-table-column field-rename="name"></ar-table-column>
     </ar-table-row> 
 </ar-table>
+```
+
+**ar-combobox** example:
+
+```html
+<ar-combobox
+    ng-model="productVersion.product.id"
+    items="productList"
+    description="description"
+    infinite-scroll-callback="searchProduct"
+    selected-item-callback="selectProduct"
+    di-validator="required"
+    ng-disabled="hasProject"
+    link-callback="openLink"
+</ar-combobox>
 ```
