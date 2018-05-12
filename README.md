@@ -30,6 +30,6 @@
     selected-item-callback="selectProduct"
     di-validator="required"
     ng-disabled="hasProject"
-    link-callback="openLink"
+    link-callback="openLink">
 </ar-combobox>
 ```
